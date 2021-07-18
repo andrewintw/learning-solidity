@@ -15,6 +15,7 @@ contract MyContract {
 
     constructor() {
         setShipDay(SUN);
+        // setShipDay(0); // 你還是無法阻止有人寫出這樣的程式。compile 也會過！
     }
 
     function setShipDay(uint8 shday) public {
