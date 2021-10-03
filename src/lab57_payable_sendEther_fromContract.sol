@@ -25,7 +25,6 @@ contract PayableTestContract {
     }
     
     function sendEtherToChk1(address payable _addr, uint256 _amount) public {
-        // if ( _addr.send(_amount) == false) 
         if (! _addr.send(_amount)) {
             revert("failed to send ether!");
         }
