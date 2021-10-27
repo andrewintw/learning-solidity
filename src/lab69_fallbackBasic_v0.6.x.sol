@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: UNLICENSED
-// lab64_fallback_v0.6.x.sol
+// lab69_fallbackBasic_v0.6.x.sol
 
 pragma solidity >=0.8.0 <0.9.0;
 
 contract TestContract {
-    event fallbackTrigged(address, bytes, uint256);
-    event receiveTrigged(address, uint256);
+    event fallbackTrigged(address _addr, bytes _data);
+    event receiveTrigged(address _addr, uint256 _value);
 
-    fallback() external payable { // works on solidity >=0.6.0
-        emit fallbackTrigged(msg.sender, msg.data, msg.value);
+    fallback() external { // works on solidity >=0.6.0
+        emit fallbackTrigged(msg.sender, msg.data);
     }
 
     receive() external payable {

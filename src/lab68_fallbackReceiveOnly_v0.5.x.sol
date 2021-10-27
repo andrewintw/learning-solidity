@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-// lab62_fallback_v0.5.x.sol
+// lab68_fallbackReceiveOnly_v0.5.x.sol
 
 pragma solidity >=0.5.0 <0.6.0;
 
