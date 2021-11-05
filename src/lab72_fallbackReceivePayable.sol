@@ -12,7 +12,7 @@ contract TestContract {
     }
 
     function receive() external payable {
-        emit receiveFallback(msg.sender, msg.value);
+        emit receivePayable(msg.sender, msg.value);
     }
     
     function getBalance() public view returns(uint256) {
