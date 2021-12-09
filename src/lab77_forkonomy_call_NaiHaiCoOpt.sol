@@ -24,5 +24,9 @@ contract ForkonomyTest {
         returns (uint _oceanid, address _owner, uint _volume, uint _price, uint _time) {
         NaiHai nh = NaiHai(naihai_addr);
         (_oceanid, _owner, _volume, _price, _time) = nh.oceanTransInfo(_id);
+        /* 事實上 nh.oceanTransInfo() 不是呼叫這份 .sol 文件中 NaiHai 合約的 oceanTransInfo()
+           而是呼叫 naihai_addr 所在合約的 oceanTransInfo()
+           而 naihai_addr 合約已經被佈署在鏈上了
+        */
     }
 }
